@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Start a New Survey{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+  <li class="breadcrumb-item active">{{ survey.name }}</li>
+  <li class="breadcrumb-item active">Design Profiles</li>
+
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+
+    <div class="form-group row">
+	  <label for="name_input" class="col-4 col-form-label">Name</label>
+	  <div class="col-10">
+	    <input class="form-control" type="text" value="Name" id="name_input" name="name_input">
+	  </div>
+	</div>
+
+	<div class="form-group row">
+	  <label for="image_input" class="col-4 col-form-label">URL</label>
+	  <div class="col-10">
+	    <input class="form-control" type="url" value="Url Here" id="image_input" name="image_input">
+	  </div>
+	  <small id="emailHelp" class="form-text text-muted">Images are optional and discouraged.</small>
+	</div>
+
+	<div class="form-group row">
+	  <label for="bin1_input" class="col-4 col-form-label"> {{ design.name }} </label>	
+	    <div class="form-group col-md-10">
+          <select class="custom-select my-1 mr-sm-2" name="bin1_input" id="bin1_input">
+            <option value="0" selected>Has</option>
+            <option value="1">Doesn't Have</option>
+          </select>
+        </div>
+    </div>
+
+	<div class="form-group row">
+	  <label for="con1_input" class="col-4 col-form-label">{{design.att1_name}}</label>	
+	    <div class="form-group col-md-10">
+			<input class="form-control" type="number" value="Name" id="con1_input" name="con1_input">
+        </div>
+    </div>
+
+
+
+
+    <button type="submit" class="btn btn-primary float-right">Next</button>
+    
+ </form>
+{% endblock %}

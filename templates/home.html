@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item active">Home</li>
+{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+
+    Welcome to the CBC Helper <br>
+    <a href="{% url 'new_survey' %}">New Survey</a> <br>
+    <a href="{% url 'all_surveys' %}">See Surveys</a>
+  
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Start a New Survey{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+  <li class="breadcrumb-item active">All Surveys</li>
+{% endblock %}
+
+{% block content %}
+<table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Survey</th>
+        <th>Description</th>
+        <th>Last Updated</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for survey in surveys %}
+        <tr>
+          <td>
+            {{survey.name}} 
+            
+          </td>
+          <td><small class="text-muted d-block">{{ survey.description }}</small></td>
+          <td><small class="text-muted d-block">{{ survey.created_at }}</small></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

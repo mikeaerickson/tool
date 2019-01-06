@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Start a New Survey{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+  <li class="breadcrumb-item active"><a href="{% url 'user_profile' user=user.username%}">{{ user.username }}</a></li>
+  <li class="breadcrumb-item active">{{ survey.name }}</li>
+  <li class="breadcrumb-item active">Design Survey</li>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+      <p><font size="6">Design the Survey</font></p>
+
+
+      <label for="qs">How many alternatives? </label> <b><span id="alt_chosen"></span> </b>
+       
+          <input type="range" min="1" max="10" value="2" class="slider" name="num_alt_input" id="num_alt_input">
+
+
+
+      <br>
+
+      <label for="qs">How many questions? </label> <b><span id="ques_chosen"></span> </b>
+
+          <input type="range" min="5" max="20" value="10" class="slider" name="num_qs_input" id="num_qs_input">
+
+      <script>
+      var sliderq = document.getElementById("num_qs_input");
+      var outputq = document.getElementById("ques_chosen");
+      var slidera = document.getElementById("num_alt_input");
+      var outputa = document.getElementById("alt_chosen");
+      outputa.innerHTML = slidera.value;
+      outputq.innerHTML = sliderq.value;
+      sliderq.oninput = function() {
+        outputq.innerHTML = sliderq.value;
+      }
+      slidera.oninput = function() {
+        outputa.innerHTML = slidera.value;
+      }
+      </script>
+
+      <br>
+     
+
+
+      <input id='testNameHidden' type='hidden' value='0' name='none_option_input'>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="1" name="none_option_input" id="none_option_input">
+        <label class="form-check-label" for="defaultCheck1">
+          Provide a 'None' option
+        </label>
+      </div> <br><br>
+
+
+
+
+    <button type="submit" class="btn btn-primary">Next</button>
+  </form>
+
+
+{% endblock %}

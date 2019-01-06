@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ study.name }} - {{ block.super }}
+{% endblock %}
+
+{% block breadcrumb %}
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Study</a></li>
+        <li class="breadcrumb-item active">{{ study.name }}</li>
+{% endblock %}
+
+{% block content %}
+  <div class="mb-4">
+    <a href="{% url 'new_survey' study.pk %}" class="btn btn-primary">New Survey</a>
+  </div>
+
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Survey</th>
+        <th>Starter</th>
+        <th>Results</th>
+        <th>Views</th>
+        <th>Last Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for survey in study.survey.all %}
+        <tr>
+          <td>{{ survey.name }}</td>
+          <td>0</td>
+          <td>0</td>
+          <td>{{ survey.created_at }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

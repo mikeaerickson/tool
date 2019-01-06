@@ -1,0 +1,569 @@
+{% extends 'base.html' %}
+
+{% block title %}Start a New Survey{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+  <li class="breadcrumb-item active">{{ survey.name }}</li>
+  <li class="breadcrumb-item active">Design Questions</li>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    
+    <SCRIPT>  
+      function show(select_item) {
+          if (select_item == "0") {
+          att1v.style.visibility='visible';
+          att1v.style.display='initial';
+          Form.fileURL.focus();
+        } 
+        else{
+          att1v.style.visibility='hidden';
+          att1v.style.display='none';
+        }
+      } 
+    </SCRIPT> 
+
+
+<input id='testNameHidden' type='hidden' value='-1' name='att1v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att1v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att1v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att1v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att1v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att1v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att1v7_input'>
+
+<input id='testNameHidden' type='hidden' value='-1' name='att2v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att2v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att2v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att2v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att2v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att2v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att2v7_input'>
+
+<input id='testNameHidden' type='hidden' value='-1' name='att3v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att3v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att3v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att3v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att3v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att3v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att3v7_input'>
+
+<input id='testNameHidden' type='hidden' value='-1' name='att4v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att4v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att4v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att4v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att4v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att4v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att4v7_input'>
+
+<input id='testNameHidden' type='hidden' value='-1' name='att5v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att5v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att5v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att5v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att5v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att5v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att5v7_input'>
+
+<input id='testNameHidden' type='hidden' value='-1' name='att6v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att6v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att6v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att6v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att6v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att6v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att6v7_input'>
+
+<input id='testNameHidden' type='hidden' value='-1' name='att7v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att7v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att7v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att7v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att7v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att7v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att7v7_input'>
+
+<input id='testNameHidden' type='hidden' value='-1' name='att8v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att8v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att8v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att8v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att8v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att8v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att8v7_input'>
+
+<input id='testNameHidden' type='hidden' value='-1' name='att9v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att9v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att9v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att9v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att9v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att9v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att9v7_input'>
+
+<input id='testNameHidden' type='hidden' value='-1' name='att10v1_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att10v2_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att10v3_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att10v4_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att10v5_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att10v6_input'>
+<input id='testNameHidden' type='hidden' value='-1' name='att10v7_input'>
+
+
+    <b>Attribute 1</b>
+    <div class="form-row align-items-center">
+        <div class="form-group col-md-10">
+          <input type="text" class="form-control" name="att1_name_input" id="att1_name_input" placeholder="Name">
+        </div>
+        <div class="form-group col-md-2">
+          <select class="custom-select my-1 mr-sm-2" name="att1_type_input" id="att1_type_input" onchange="java_script_:show(this.options[this.selectedIndex].value)">
+            <option value="0" selected>Continuous</option>
+            <option value="1">Binary</option>
+          </select>
+        </div>
+      </div>
+
+        <div id="att1v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att1v1_input" id="att1v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att1v2_input" id="att1v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att1v3_input" id="att1v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att1v4_input" id="att1v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att1v5_input" id="att1v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att1v6_input" id="att1v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att1v7_input" id="att1v7_input" placeholder="Value 7">
+          </div>
+        </div>
+
+        <br>
+      
+    <b>Attribute 2</b>
+    <div class="form-row align-items-center">
+        <div class="form-group col-md-10">
+          <input type="text" class="form-control" name="att2_name_input" id="att2_name_input" placeholder="Name">
+        </div>
+        <div class="form-group col-md-2">
+          <select class="custom-select my-1 mr-sm-2" name="att2_type_input" id="att2_type_input">
+            <option value="0" selected>Continuous</option>
+            <option value="1">Binary</option>
+          </select>
+        </div>
+    </div>
+
+        <div id="att2v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att2v1_input" id="att2v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att2v2_input" id="att2v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att2v3_input" id="att2v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att2v4_input" id="att2v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att2v5_input" id="att2v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att2v6_input" id="att2v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att2v7_input" id="att2v7_input" placeholder="Value 7">
+          </div>
+        </div>
+
+<br>
+
+     <b>Attribute 3</b>
+    <div class="form-row align-items-center">
+        <div class="form-group col-md-10">
+          <input type="text" class="form-control" name="att3_name_input" id="att3_name_input" placeholder="Name">
+        </div>
+        <div class="form-group col-md-2">
+          <select class="custom-select my-1 mr-sm-2" id="att3_type_input" name="att3_type_input">
+            <option value="0" selected>Continuous</option>
+            <option value="1">Binary</option>
+          </select>
+        </div>
+    </div>
+
+        <div id="att3v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att3v1_input" id="att3v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att3v2_input" id="att3v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att3v3_input" id="att3v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att3v4_input" id="att3v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att3v5_input" id="att3v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att3v6_input" id="att3v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att3v7_input" id="att3v7_input" placeholder="Value 7">
+          </div>
+        </div>
+    
+<br>
+    <div id="att4"  style="display:none;">
+    <b>Attribute 4</b>
+      <div class="form-row align-items-center">
+        
+          <div class="input-group col-md-10">
+              <input type="text" class="form-control" id="att4_name_input" name="att4_name_input" placeholder="Name" aria-label="Name" aria-describedby="basic-addon2">
+              <!--<div class="input-group-append">
+                <button class="btn btn-outline-danger" type="button">Remove</button>
+              </div>-->
+          </div>
+
+          <div class="form-group col-md-2">
+            <select class="custom-select my-1 mr-sm-2" id="att4_type_input" name="att4_type_input">
+              <option value="0" selected>Continuous</option>
+              <option value="1">Binary</option>
+            </select>
+          </div>
+      </div>
+        <div id="att4v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att4v1_input" id="att4v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att4v2_input" id="att4v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att4v3_input" id="att4v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att4v4_input" id="att4v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att4v5_input" id="att4v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att4v6_input" id="att4v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att4v7_input" id="att4v7_input" placeholder="Value 7">
+          </div>
+        </div>
+        <br>
+    </div>
+
+    <div id="att5"  style="display:none;">
+    <b>Attribute 5</b>
+      <div class="form-row align-items-center">
+          <div class="form-group col-md-10">
+            <input type="text" class="form-control" id="att5_name_input" name="att5_name_input" placeholder="Name">
+          </div>
+          <div class="form-group col-md-2">
+            <select class="custom-select my-1 mr-sm-2" id="att5_type_input" name="att5_type_input">
+              <option value="0" selected>Continuous</option>
+              <option value="1">Binary</option>
+            </select>
+          </div>
+      </div>
+
+        <div id="att5v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att5v1_input" id="att5v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att5v2_input" id="att5v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att5v3_input" id="att5v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att5v4_input" id="att5v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att5v5_input" id="att5v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att5v6_input" id="att5v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att5v7_input" id="att5v7_input" placeholder="Value 7">
+          </div>
+        </div>
+        <br>
+
+    </div>
+
+    <div id="att6"  style="display:none;">
+    <b>Attribute 6</b>
+      <div class="form-row align-items-center">
+          <div class="form-group col-md-10">
+            <input type="text" class="form-control" id="att6_name_input" name="att6_name_input" placeholder="Name">
+          </div>
+          <div class="form-group col-md-2">
+            <select class="custom-select my-1 mr-sm-2" id="att6_type_input" name="att6_type_input">
+              <option value="0" selected>Continuous</option>
+              <option value="1">Binary</option>
+            </select>
+          </div>
+      </div>
+        <div id="att6v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att6v1_input" id="att6v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att6v2_input" id="att6v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att6v3_input" id="att6v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att6v4_input" id="att6v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att6v5_input" id="att6v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att6v6_input" id="att6v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att6v7_input" id="att6v7_input" placeholder="Value 7">
+          </div>
+        </div>
+        <br>
+    </div>
+
+
+    <div id="att7"  style="display:none;">
+    <b>Attribute 7</b>
+      <div class="form-row align-items-center">
+          <div class="form-group col-md-10">
+            <input type="text" class="form-control" id="att7_name_input" name="att7_name_input" placeholder="Name">
+          </div>
+          <div class="form-group col-md-2">
+            <select class="custom-select my-1 mr-sm-2" id="att7_type_input" name="att7_type_input">
+              <option value="0" selected>Continuous</option>
+              <option value="1">Binary</option>
+            </select>
+          </div>
+      </div>
+
+        <div id="att7v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att7v1_input" id="att7v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att7v2_input" id="att7v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att7v3_input" id="att7v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att7v4_input" id="att7v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att7v5_input" id="att7v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att7v6_input" id="att7v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att7v7_input" id="att7v7_input" placeholder="Value 7">
+          </div>
+        </div>
+        <br>
+    </div>
+
+
+    <div id="att8"  style="display:none;">
+    <b>Attribute 8</b>
+      <div class="form-row align-items-center">
+          <div class="form-group col-md-10">
+            <input type="text" class="form-control" id="att8_name_input" name="att8_name_input" placeholder="Name">
+          </div>
+          <div class="form-group col-md-2">
+            <select class="custom-select my-1 mr-sm-2" id="att8_type_input" name="att8_type_input">
+              <option value="0" selected>Continuous</option>
+              <option value="1">Binary</option>
+            </select>
+          </div>
+      </div>
+        <div id="att8v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att8v1_input" id="att8v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att8v2_input" id="att8v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att8v3_input" id="att8v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att8v4_input" id="att8v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att8v5_input" id="att8v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att8v6_input" id="att8v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att8v7_input" id="att8v7_input" placeholder="Value 7">
+          </div>
+        </div>
+        <br>
+    </div>
+
+    <div id="att9"  style="display:none;">
+    <b>Attribute 9</b>
+      <div class="form-row align-items-center">
+          <div class="form-group col-md-10">
+            <input type="text" class="form-control" id="att9_name_input" name="att9_name_input" placeholder="Name">
+          </div>
+          <div class="form-group col-md-2">
+            <select class="custom-select my-1 mr-sm-2" id="att9_type_input" name="att9_type_input">
+              <option value="0" selected>Continuous</option>
+              <option value="1">Binary</option>
+            </select>
+          </div>
+      </div>
+        <div id="att9v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att9v1_input" id="att9v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att9v2_input" id="att9v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att9v3_input" id="att9v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att9v4_input" id="att9v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att9v5_input" id="att9v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att9v6_input" id="att9v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att9v7_input" id="att9v7_input" placeholder="Value 7">
+          </div>
+        </div>
+        <br>
+    </div>
+
+    <div id="att10"  style="display:none;">
+    <b>Attribute 10</b>
+      <div class="form-row align-items-center">
+          <div class="form-group col-md-10">
+            <input type="text" class="form-control" id="att10_name_input" name="att10_name_input" placeholder="Name">
+          </div>
+          <div class="form-group col-md-2">
+            <select class="custom-select my-1 mr-sm-2" id="att10_type_input" name="att10_type_input">
+              <option value="0" selected>Continuous</option>
+              <option value="1">Binary</option>
+            </select>
+          </div>
+      </div>
+        <div id="att10v" class="form-row" style="inline">
+          <div class="col">
+            <input type="number" class="form-control" name="att10v1_input" id="att10v1_input" placeholder="Value 1">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att10v2_input" id="att10v2_input" placeholder="Value 2">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att10v3_input" id="att10v3_input" placeholder="Value 3">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att10v4_input" id="att10v4_input" placeholder="Value 4">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att10v5_input" id="att10v5_input" placeholder="Value 5">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att10v6_input" id="att10v6_input" placeholder="Value 6">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" name="att10v7_input" id="att10v7_input" placeholder="Value 7">
+          </div>
+        </div>
+    </div>
+
+<br>
+    <script>
+      function show4() 
+      {
+        document.getElementById('att4').style.display = "block";
+        document.getElementById('att4show').style.display = "none";
+        document.getElementById('att5show').style.display = "block";
+      }  
+      function show5() 
+      {
+        document.getElementById('att5').style.display = "block";
+        document.getElementById('att5show').style.display = "none";
+        document.getElementById('att6show').style.display = "block";
+      }  
+      function show6() 
+      {
+        document.getElementById('att6').style.display = "block";
+        document.getElementById('att6show').style.display = "none";
+        document.getElementById('att7show').style.display = "block";
+      } 
+      function show7() 
+      {
+        document.getElementById('att7').style.display = "block";
+        document.getElementById('att7show').style.display = "none";
+        document.getElementById('att8show').style.display = "block";
+      } 
+      function show8() 
+      {
+        document.getElementById('att8').style.display = "block";
+        document.getElementById('att8show').style.display = "none";
+        document.getElementById('att9show').style.display = "block";
+      } 
+      function show9() 
+      {
+        document.getElementById('att9').style.display = "block";
+        document.getElementById('att9show').style.display = "none";
+        document.getElementById('att10show').style.display = "block";
+      } 
+      function show10() 
+      {
+        document.getElementById('att10').style.display = "block";
+        document.getElementById('att10show').style.display = "none";
+      } 
+
+    </script>
+
+    <button type="button" id="att4show" class="btn btn-success" onclick="show4()">Add More</button>
+    <button type="button" id="att5show" class="btn btn-success" style="display:none;" onclick="show5()">Add More</button>
+    <button type="button" id="att6show" class="btn btn-success" style="display:none;" onclick="show6()">Add More</button>
+    <button type="button" id="att7show" class="btn btn-success" style="display:none;" onclick="show7()">Add More</button>
+    <button type="button" id="att8show" class="btn btn-success" style="display:none;" onclick="show8()">Add More</button>
+    <button type="button" id="att9show" class="btn btn-success" style="display:none;" onclick="show9()">Add More</button>
+    <button type="button" id="att10show" class="btn btn-success" style="display:none;" onclick="show10()">Add More</button>
+    <button type="submit" class="btn btn-primary float-right">Next</button>
+
+
+
+<br><br><br><br>
+    
+  </form>
+{% endblock %}
